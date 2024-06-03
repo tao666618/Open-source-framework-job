@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    name: work
+    url: jdbc:mysql://localhost:3306/SMS
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  freemarker:
+    cache: false
+    suffix: .ftl
+    template-loader-path: classpath:/templates/
+    content-type: text/html
+    enabled: true
+    check-template-location: true
+  web:
+    resources:
+      static-locations: classpath:/templates/
+
+#jpa:
+#  hibernate:
+#    ddl-auto: update #????
+#  show-sql: true  #?????sql??
+
+#server:
+#  port: 8086
+
+server:
+  port: 12345
+
+
