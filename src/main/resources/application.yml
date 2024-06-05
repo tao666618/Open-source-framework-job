@@ -22,8 +22,7 @@ spring:
 #    ddl-auto: update #????
 #  show-sql: true  #?????sql??
 
-#server:
-#  port: 8086
+
 
 server:
   port: 12345

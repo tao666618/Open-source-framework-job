@@ -29,7 +29,7 @@ public class StudentController {
     /*
      * 实现学生注册功能*/
     @ResponseBody //将返回的数据转换为json格式
-    @PostMapping("/Sregister")
+    @PostMapping("/SignStudentMethod")
     public Student Sregister(@RequestBody Student student) {
         log.info("注册学生信息");
         if (studentService.getByCard(student.getCard()) == null && student.getCard() != null) {
@@ -42,7 +42,7 @@ public class StudentController {
     /*
      * 修改学生信息*/
     @ResponseBody
-    @PostMapping("/Supdate")
+    @PostMapping("/update")
     public Student Update(@RequestBody Student student) {
         log.info("修改学生信息");
         Student newStudent = studentService.getByStudentCard(student.getCard());
@@ -58,12 +58,13 @@ public class StudentController {
 
     /*删除学生功能实现*/
     @Transactional
-    @PostMapping("/Delete")
-    public void Delete(String card) {
+    @GetMapping("/Delete")
+    public String Delete(String card) {
         Boolean a = studentService.deleteByCard(card);
         if (a) {
             log.info("删除学生信息成功");
         }
+        return "home";
     }
 
     /*

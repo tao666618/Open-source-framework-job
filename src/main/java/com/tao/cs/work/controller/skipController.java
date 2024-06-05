@@ -20,7 +20,7 @@ public class skipController {
     }
 
     /*
-     * 跳转到注册界面*/
+     * 跳转到管理员注册界面*/
     @GetMapping("register")
     public String register() {
         log.info("跳转到注册界面");
@@ -60,5 +60,11 @@ public class skipController {
         return "retrieve";
     }
 
-
+    /*
+     * 学生注册*/
+    @GetMapping("/studentSign")
+    public String studentSign() {
+        log.info("跳转到学生注册界面");
+        return  "studentSign";
+    }
 }

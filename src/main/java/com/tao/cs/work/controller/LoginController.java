@@ -28,7 +28,7 @@ public class LoginController {
     public String doLogin(String userName, String password, HttpSession httpSession, Model model) {
         User user = studentService.getByUserName(userName);
         if (user != null && user.getPassword().equals(password)) {
-            httpSession.setAttribute("currentuser", user);
+            httpSession.setAttribute("user", user);
             return "home";
         } else {
             model.addAttribute("error", "用户名或密码输入错误，登陆失败");

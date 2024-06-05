@@ -20,7 +20,7 @@ public interface IStudentService  {
 
     List<Student> findAllStudent();
 
-    Object getByCard(String card);
+    Student getByCard(String card);
 
     Student getByStudentCard(String card);
 

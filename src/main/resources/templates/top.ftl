@@ -5,9 +5,9 @@
         欢迎访问学生管理系统
     </div>
     <div style="text-align: right">
-        欢迎您，
-        <#if currentuser??>
-            <strong>${currentuser.name!''}</strong>
+        欢迎您
+        <#if user??>
+            <strong>,${user.name}</strong>
         </#if>
         <a href="/">重新登录</a>
     </div>

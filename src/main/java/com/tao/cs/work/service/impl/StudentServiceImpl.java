@@ -35,7 +35,7 @@ public class StudentServiceImpl implements IStudentService {
     }
 
     @Override
-    public Object getByCard(String card) {
+    public Student getByCard(String card) {
         return studentMapper.getByCard(card);
     }
 

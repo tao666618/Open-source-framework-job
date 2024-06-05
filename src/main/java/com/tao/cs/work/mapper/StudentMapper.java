@@ -28,7 +28,7 @@ public interface StudentMapper {
     List<Student> selectAllStudents();
 
     @Select("SELECT * FROM student WHERE card = #{card}")
-    Object getByCard(String card);
+    Student getByCard(String card);
 
     @Insert("INSERT INTO student (card, name, sex, phone) VALUES (#{card}, #{name}, #{sex}, #{phone})")
     void insertStudent(String card, String name, String sex, String phone);

@@ -12,8 +12,7 @@
 
 <div style="width: 800px;margin: 0 auto">
     <#include 'left.ftl'>
-
-    <form action="/Retrieve" method="post">
+    <form action="student/Retrieve" method="post">
         <fieldset>
             <legend>搜索学生</legend>
             <table class="formtable" style="width:50%">

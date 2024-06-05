@@ -12,7 +12,7 @@
             $.ajax({
                 type: "POST",
                 dataType: "json",
-                url: '/Supdate',
+                url: 'student/update',
                 contentType: "application/json",
                 data: JSON.stringify({
                     "card":card,

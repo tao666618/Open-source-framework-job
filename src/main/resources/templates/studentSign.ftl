@@ -12,7 +12,7 @@
             $.ajax({
                 type: "POST",
                 dataType: "json",
-                url: '/Sregister',
+                url: '/student/SignStudentMethod',
                 contentType: "application/json",
                 data: JSON.stringify({
                     "card":card,
@@ -23,7 +23,7 @@
                 success: function (result) {
                     if(result){
                     alert("注册成功");
-                    window.location.href="sregister";
+                    window.location.href="studentSign";
                     }
                 },
                     error: function () {

@@ -37,7 +37,8 @@
                         <td>${student.getSex()}</td>
                         <td>${student.getPhone()}</td>
                         <td>
-                            <a class="btn btn-sm btn-danger" href="/Delete/${student.getCard()}">删除</a>
+                            <#--TODO : 这里有个问题  ， 点删除学生后 再点左侧跳转时url前面都会加上一个student原本是http://localhost:12345/message  变成http://localhost:12345/student/Delete
+                            --><a class="btn btn-sm btn-danger" href="/student/Delete/${student.getCard()}">删除</a>
                         </td>
                     </tr>
                 </#list>
