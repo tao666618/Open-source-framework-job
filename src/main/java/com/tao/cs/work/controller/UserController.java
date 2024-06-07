@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.stereotype.Controller;
 
+import javax.swing.plaf.SeparatorUI;
+
 /**
  * <p>
  *  前端控制器
@@ -36,8 +38,16 @@ public class UserController {
     @PostMapping("save")
     public User save(@RequestBody User user){
         log.info("注册用户信息");
-/*TODO 这个里面视图层传递过来的数据缺少一个username*/
-        return userService.save(user);
+        /*TODO 这个里面视图层传递过来的数据缺少一个username*/
+
+        userService.save(user);
+        if(userService.save(user)){
+            return user;
+        }
+        return null;
+
+
+
     }
 
 

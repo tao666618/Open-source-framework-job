@@ -27,4 +27,6 @@ public interface IStudentService  {
     void saveStudent(Student student);
 
     Boolean deleteByCard(String card);
+
+    void saveNewStudent(Student newStudent);
 }

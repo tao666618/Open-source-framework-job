@@ -54,4 +54,10 @@ public class StudentServiceImpl implements IStudentService {
     public Boolean deleteByCard(String card) {
         return studentMapper.deleteByCard(card);
     }
+
+    @Override
+    public void saveNewStudent(Student newStudent) {
+        studentMapper.insertNewStudent(newStudent.getCard(), newStudent.getName(),
+                newStudent.getSex(), newStudent.getPhone());
+    }
 }

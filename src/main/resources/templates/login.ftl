@@ -42,7 +42,7 @@
 
     <div id="content">
         <div id="leftDiv">
-            <img src="picture/login.jpg" class="leftImg"/>
+            <img src="picture/login1.jpg" class="leftImg"/>
         </div>
         <div id="rigthDiv">
             <form>
@@ -78,7 +78,7 @@
                     </tr>
                     </tbody>
                 </table>
-                <div style="color: #ff0114">${error!''}</div>
+<#--                <div style="color: #ff0114">${error!''}</div>-->
             </form>
         </div>
     </div>

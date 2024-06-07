@@ -46,7 +46,7 @@ public class skipController {
 
     /*
      * 跳转到删除界面*/
-    @GetMapping("/Delete")
+    @GetMapping("/delete")
     public String delete() {
         log.info("跳转到删除界面");
         return "delete";

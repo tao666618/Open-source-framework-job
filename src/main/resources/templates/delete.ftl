@@ -10,7 +10,7 @@
 <#include 'top.ftl'>
 <div style="width: 800px;margin: 0 auto">
     <#include 'left.ftl'>
-    <form action="student/Delete" method="get">
+    <form action="/studentDelete" method="get">
         <fieldset>
             <legend>删除学生</legend>
             <table style="width:50%">

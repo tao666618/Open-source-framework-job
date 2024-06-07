@@ -20,7 +20,6 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Slf4j
 @Controller
-@RequestMapping("/student")
 public class StudentController {
 
     @Autowired
@@ -50,7 +49,7 @@ public class StudentController {
             newStudent.setName(student.getName());
             newStudent.setSex(student.getSex());
             newStudent.setPhone(student.getPhone());
-            studentService.saveStudent(newStudent);
+            studentService.saveNewStudent(newStudent);
             return newStudent;
         }
         return null;
@@ -58,7 +57,7 @@ public class StudentController {
 
     /*删除学生功能实现*/
     @Transactional
-    @GetMapping("/Delete")
+    @GetMapping("/studentDelete")
     public String Delete(String card) {
         Boolean a = studentService.deleteByCard(card);
         if (a) {

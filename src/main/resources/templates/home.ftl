@@ -15,7 +15,7 @@
 <body>
 <#include 'top.ftl'>
 <div style="width: 800px;margin: 0 auto">
-  <img class="img" src="picture/login2.jpg"/>
+  <img class="img" src="picture/login1.jpg"/>
   <#include 'left.ftl'>
 </div>
 

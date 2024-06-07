@@ -3,10 +3,7 @@ package com.tao.cs.work.mapper;
 
 import com.tao.cs.work.entity.Student;
 import com.tao.cs.work.entity.User;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -35,4 +32,7 @@ public interface StudentMapper {
 
     @Delete("DELETE FROM student WHERE card = #{card}")
     Boolean deleteByCard(String card);
+
+    @Update("UPDATE student SET name = #{name},sex = #{sex} , phone = #{phone} WHERE card = #{card}")
+    void insertNewStudent(String card, String name, String sex, String phone);
 }

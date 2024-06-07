@@ -12,7 +12,7 @@
             $.ajax({
                 type: "POST",
                 dataType: "json",
-                url: '/student/SignStudentMethod',
+                url: '/SignStudentMethod',
                 contentType: "application/json",
                 data: JSON.stringify({
                     "card":card,

@@ -13,5 +13,7 @@ import com.tao.cs.work.entity.User;
  */
 public interface IUserService {
 
-    User save(User user);
+    Boolean save(User user);
+
+    User getByUsername(String username);
 }

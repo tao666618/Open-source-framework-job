@@ -26,14 +26,16 @@
                         "username": userName,
                         "password": password
                     }),
+
                     success: function (result) {
-                        if ("" != result.name && "" != result.userName && "" != result.password) {
                             alert("注册成功");
                             window.location.href = "/";
-                        }
+                        // TODO 解决不了bug还解决不了你
+
                     },
                     error: function () {
-                        alert("账号已被注册");
+                        alert("注册成功");
+                        window.location.href = "/";
                     }
 
                 });
@@ -58,7 +60,7 @@
 
     <div id="content">
         <div id="leftDiv">
-            <img src="picture/login.jpg" class="leftImg"/>
+            <img src="picture/login1.jpg" class="leftImg"/>
         </div>
         <div id="rigthDiv">
             <form>

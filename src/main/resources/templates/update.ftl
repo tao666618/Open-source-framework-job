@@ -12,7 +12,7 @@
             $.ajax({
                 type: "POST",
                 dataType: "json",
-                url: 'student/update',
+                url: 'update',
                 contentType: "application/json",
                 data: JSON.stringify({
                     "card":card,
@@ -26,6 +26,7 @@
                         window.location.href="update";
                     }
                 },
+
                     error: function () {
                         alert("请填写完整！");
                     }
